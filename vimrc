@@ -94,9 +94,13 @@ if has("gui_macvim")
     autocmd GUIEnter * set vb t_vb=
 endif
 
+set showmode
+set showcmd
+set mouse=a
+set number
 
-" Add a bit extra margin to the left
-set foldcolumn=1
+" to underline entire cursor line
+set cursorline
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -140,6 +144,10 @@ set nobackup
 set nowb
 set noswapfile
 
+" When you open a file, you can undo changes you made previously
+set undofile
+set undodir=~/.vim/undo/
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -150,9 +158,9 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+" 1 tab == 2 spaces
+set shiftwidth=2
+set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
@@ -161,6 +169,9 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+
+" make tabs and trailing spaces visible
+set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
 
 """"""""""""""""""""""""""""""
@@ -227,15 +238,19 @@ endtry
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+" Make Ctrl-e jump to the end of the current line in the insert mode. This is
+" handy when you are in the middle of a line and would like to go to its end
+" without switching to the normal mode.
+inoremap <C-e> <C-o>$
+
+" Match my tmux config
+nnoremap <Leader>- :split<cr>
+nnoremap <Leader>\| :vsplit<cr>
+
 
 """"""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""
-" Always show the status line
-set laststatus=2
-
-" Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
