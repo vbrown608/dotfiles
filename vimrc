@@ -11,7 +11,13 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'fatih/vim-go'
+Plugin 'tomtom/tcomment_vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+let g:nerdtree_tabs_open_on_console_startup = 1
+
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -41,6 +47,9 @@ nmap <leader>w :w!<cr>
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
+
+" Set timeout for esc (and others)
+set timeoutlen=500 ttimeoutlen=0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -298,6 +307,9 @@ endfun
 if has("autocmd")
     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
 endif
+
+" Exit insert mode with jj
+inoremap jj <Esc>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
