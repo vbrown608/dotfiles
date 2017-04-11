@@ -117,3 +117,8 @@ if ! shopt -oq posix; then
 fi
 
 alias la="ls -lah"
+alias "addnw"="git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero -"
+
+export PYTHONPATH="${PYTHONPATH}:."
+
+export GOPATH="/home/vivian/recurse/go"
