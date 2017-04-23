@@ -15,9 +15,11 @@ Plugin 'fatih/vim-go'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-let g:nerdtree_tabs_open_on_console_startup = 1
+let g:nerdtree_tabs_open_on_console_startup = 2
 
-
+Plugin 'altercation/vim-colors-solarized'
+let g:solarized_visibility = "low"
+let g:solarized_contrast = "high"
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -79,7 +81,7 @@ endif
 set ruler
 
 " Height of the command bar
-set cmdheight=2
+set cmdheight=1
 
 " A buffer becomes hidden when it is abandoned
 set hid
@@ -143,7 +145,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme desert
+    colorscheme solarized
 catch
 endtry
 

@@ -133,6 +133,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+eval `dircolors ~/.dir_colors/dircolors`
+
 alias la="ls -lah"
 alias "addnw"="git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero -"
 
