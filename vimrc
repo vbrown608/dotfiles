@@ -390,3 +390,9 @@ let g:NERDTreeWinSize=35
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Language-specific
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use nasm syntax highlighting for assmebly
+au BufRead,BufNewFile *.asm set filetype=nasm
