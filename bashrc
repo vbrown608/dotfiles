@@ -137,6 +137,7 @@ eval `dircolors ~/.dir_colors/dircolors`
 
 alias la="ls -lah"
 alias "addnw"="git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero -"
+alias nodejs="node"
 
 export PYTHONPATH="${PYTHONPATH}:."
 export GOPATH="/home/vivian/recurse/go"
