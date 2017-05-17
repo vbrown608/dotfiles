@@ -15,7 +15,6 @@ Plugin 'fatih/vim-go'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-let g:nerdtree_tabs_open_on_console_startup = 2
 
 Plugin 'altercation/vim-colors-solarized'
 let g:solarized_visibility = "low"
@@ -386,10 +385,12 @@ endfunction
 let g:nerdtreewinpos = "right"
 let nerdtreeshowhidden=0
 let nerdtreeignore = ['\.pyc$', '__pycache__']
-let g:NERDTreeWinSize=35
+let g:NERDTreeWinSize=20
+let NERDTreeMinimalUI = 1
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
+let g:nerdtree_tabs_open_on_console_startup = 2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Language-specific
