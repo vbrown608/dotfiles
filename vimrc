@@ -140,10 +140,8 @@ set cursorline
 " Enable syntax highlighting
 syntax enable
 
-" Enable 256 colors palette in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
+" Enable 256 colors palette
+set t_Co=256
 
 try
     colorscheme solarized
