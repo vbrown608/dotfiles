@@ -278,6 +278,9 @@ inoremap <C-e> <C-o>$
 nnoremap <Leader>- :split<cr>
 nnoremap <Leader>\| :vsplit<cr>
 
+" Open new split panes to right and bottom, which feels more natural than Vim’s default
+set splitbelow
+set splitright
 
 """"""""""""""""""""""""""""""
 " => Status line
