@@ -141,3 +141,9 @@ alias nodejs="node"
 
 export PYTHONPATH="${PYTHONPATH}:."
 export GOPATH="/home/vivian/recurse/go"
+
+# added by travis gem
+[ -f /home/vivian/.travis/travis.sh ] && source /home/vivian/.travis/travis.sh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
