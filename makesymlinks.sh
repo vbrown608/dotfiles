@@ -32,3 +32,8 @@ for file in $files; do
   echo "Creating symlink to $file in home directory."
   ln -s $dir/$file ~/.$file
 done
+
+# i3 configuration goes in .config
+# will generalize if there are more of these
+echo "Linking i3 config"
+ln -s $dir/i3/ ~/.config/
