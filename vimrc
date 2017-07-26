@@ -395,7 +395,7 @@ let NERDTreeMinimalUI = 1
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
-let g:nerdtree_tabs_open_on_console_startup = 2
+let g:nerdtree_tabs_open_on_console_startup = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Language-specific
