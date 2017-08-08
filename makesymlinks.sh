@@ -37,3 +37,7 @@ done
 # will generalize if there are more of these
 echo "Linking i3 config"
 ln -s $dir/i3/ ~/.config/
+
+# Get Vundle and install vim plugins
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
