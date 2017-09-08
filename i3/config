@@ -190,7 +190,5 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xrandr --output HDMI1 --scale 1.25x1.25
 exec --no-startup-id xrandr --output HDMI2 --scale 1.333x1.333
 
-# Some defaults
-assign [class="Thunderbird"] 8
-
+# Application-specific settings
 bindsym $mod+c exec chromium-browser
