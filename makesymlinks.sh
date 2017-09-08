@@ -41,3 +41,6 @@ ln -s $dir/i3/ ~/.config/
 # Get Vundle and install vim plugins
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
+
+# Get dependencies for tmux copy paste
+sudo apt install xclip
