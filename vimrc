@@ -21,8 +21,12 @@ let g:solarized_visibility = "low"
 let g:solarized_contrast = "high"
 
 Plugin 'tpope/vim-surround'
-
-Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'termhn/i3-vim-nav'
+" i3 integration
+nnoremap <silent> <c-l> :call Focus('right', 'l')<CR>
+nnoremap <silent> <c-h> :call Focus('left', 'h')<CR>
+nnoremap <silent> <c-k> :call Focus('up', 'k')<CR>
+nnoremap <silent> <c-j> :call Focus('down', 'j')<CR>
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -223,12 +227,6 @@ map <c-space> ?
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
-
-" Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT

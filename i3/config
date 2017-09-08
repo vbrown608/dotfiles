@@ -42,12 +42,6 @@ bindsym $mod+d exec dmenu_run
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-# change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -192,3 +186,9 @@ exec --no-startup-id xrandr --output HDMI2 --scale 1.333x1.333
 
 # Application-specific settings
 bindsym $mod+c exec chromium-browser
+
+# Seemless navigation with vim
+bindsym --release $mod+h exec --no-startup-id "i3-vim-nav h"
+bindsym --release $mod+j exec --no-startup-id "i3-vim-nav j"
+bindsym --release $mod+k exec --no-startup-id "i3-vim-nav k"
+bindsym --release $mod+l exec --no-startup-id "i3-vim-nav l"
