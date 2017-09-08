@@ -134,3 +134,7 @@ export GOPATH="/home/vivian/recurse/go"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# launch postman from command line
+alias "postman"="chromium-browser --app-id=fhbjgbiflinjbdggehcddcbncdddomop"
+alias "yehos-qemu"="./make_yehos.sh && qemu-system-i386 -s -S -cdrom yehos-patched.iso -monitor stdio"
