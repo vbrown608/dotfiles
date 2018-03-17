@@ -404,3 +404,9 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use nasm syntax highlighting for assmebly
 au BufRead,BufNewFile *.asm set filetype=nasm
+
+" Nginx config file
+au BufRead,BufNewFile *.nginx set ft=nginx
+au BufRead,BufNewFile */etc/nginx/* set ft=nginx
+au BufRead,BufNewFile */usr/local/nginx/conf/* set ft=nginx
+au BufRead,BufNewFile nginx.conf set ft=nginx
