@@ -122,19 +122,19 @@ fi
 
 eval `dircolors ~/.dir_colors/dircolors`
 
-alias la="ls -lah"
-alias "addnw"="git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero -"
-alias nodejs="node"
-
 export PYTHONPATH="${PYTHONPATH}:."
 export GOPATH="/home/vivian/recurse/go"
 
-# added by travis gem
+# Added by travis gem
 [ -f /home/vivian/.travis/travis.sh ] && source /home/vivian/.travis/travis.sh
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# Add rvm and yarm to path
+export PATH="$PATH:$HOME/.yarn/bin:$HOME/.rvm/bin"
 
-# launch postman from command line
-alias "postman"="chromium-browser --app-id=fhbjgbiflinjbdggehcddcbncdddomop"
+# Assorted handy aliases
+alias la="ls -lah"
+alias addnw="git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero -"
+alias nodejs="node"
+alias postman="chromium-browser --app-id=fhbjgbiflinjbdggehcddcbncdddomop"
 alias "yehos-qemu"="./make_yehos.sh && qemu-system-i386 -s -S -cdrom yehos-patched.iso -monitor stdio"
+alias dce="docker-compose exec"
