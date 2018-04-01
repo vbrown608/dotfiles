@@ -182,10 +182,8 @@ bindsym $mod+b workspace back_and_forth
 # Start networking configurator
 exec --no-startup-id nm-applet
 
-# Set some good defaults for monitors
-# @TODO query xrandr for connected outputs and configure conditionally
-exec --no-startup-id xrandr --output HDMI1 --scale 1.25x1.25
-exec --no-startup-id xrandr --output HDMI2 --scale 1.333x1.333
+# Detect monitors and apply preferred layout
+bindsym $mod+z exec --no-startup-id ~/dotfiles/screenlayout.sh
 
 # Application-specific settings
 bindsym $mod+c exec chromium-browser
