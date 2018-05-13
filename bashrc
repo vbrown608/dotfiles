@@ -123,13 +123,13 @@ fi
 eval `dircolors ~/.dir_colors/dircolors`
 
 export PYTHONPATH="${PYTHONPATH}:."
-export GOPATH="/home/vivian/recurse/go"
+export GOPATH="$HOME/dev/go"
 
 # Added by travis gem
 [ -f /home/vivian/.travis/travis.sh ] && source /home/vivian/.travis/travis.sh
 
 # Add rvm and yarm to path
-export PATH="$PATH:$HOME/.yarn/bin:$HOME/.rvm/bin"
+export PATH="$PATH:$HOME/.yarn/bin:$HOME/.rvm/bin:/usr/local/go/bin:$GOPATH/bin"
 
 # Assorted handy aliases
 alias la="ls -lah"
