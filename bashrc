@@ -122,6 +122,7 @@ fi
 
 eval `dircolors ~/.dir_colors/dircolors`
 
+export EDITOR=vim
 export PYTHONPATH="${PYTHONPATH}:."
 export GOPATH="$HOME/dev/go"
 
@@ -135,6 +136,7 @@ export PATH="$PATH:$HOME/.yarn/bin:$HOME/.rvm/bin:/usr/local/go/bin:$GOPATH/bin"
 alias la="ls -lah"
 alias addnw="git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero -"
 alias nodejs="node"
-alias postman="chromium-browser --app-id=fhbjgbiflinjbdggehcddcbncdddomop"
 alias "yehos-qemu"="./make_yehos.sh && qemu-system-i386 -s -S -cdrom yehos-patched.iso -monitor stdio"
 alias dce="docker-compose exec"
+
+export CDPATH=.:/home/vivian/dev/go/src/github.com
