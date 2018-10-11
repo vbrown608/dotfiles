@@ -12,21 +12,26 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'fatih/vim-go'
+let g:go_fmt_command = "goimports"
+
 Plugin 'tomtom/tcomment_vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'mileszs/ack.vim'
+let g:ackprg = 'ag --vimgrep'
 
 Plugin 'altercation/vim-colors-solarized'
 let g:solarized_visibility = "low"
 let g:solarized_contrast = "high"
 
 Plugin 'tpope/vim-surround'
-Plugin 'termhn/i3-vim-nav'
+Plugin 'vbrown608/i3-vim-nav'
 " i3 integration
 nnoremap <silent> <c-l> :call Focus('right', 'l')<CR>
 nnoremap <silent> <c-h> :call Focus('left', 'h')<CR>
 nnoremap <silent> <c-k> :call Focus('up', 'k')<CR>
 nnoremap <silent> <c-j> :call Focus('down', 'j')<CR>
+set title
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,6 +49,9 @@ filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
+
+" Automatically write on make
+set autowrite
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -263,11 +271,11 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Specify the behavior when switching between buffers
-try
-  set switchbuf=useopen,usetab,newtab
-  set stal=2
-catch
-endtry
+" try
+"   set switchbuf=useopen,usetab,newtab
+"   set stal=2
+" catch
+" endtry
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
