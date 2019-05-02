@@ -182,6 +182,12 @@ bindsym $mod+b workspace back_and_forth
 # Start networking configurator
 exec --no-startup-id nm-applet
 
+# Trigger automated backups
+exec --no-startup-id /usr/lib/deja-dup/deja-dup-monitor
+
+# Show low battery notifications
+exec --no-startup-id i3-battery-popup
+
 # Detect monitors and apply preferred layout
 bindsym $mod+z exec --no-startup-id ~/dotfiles/screenlayout.sh
 
