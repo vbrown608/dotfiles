@@ -28,6 +28,7 @@ Plugin 'altercation/vim-colors-solarized'
 let g:solarized_visibility = "low"
 let g:solarized_contrast = "high"
 
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'vbrown608/i3-vim-nav'
 " i3 integration
