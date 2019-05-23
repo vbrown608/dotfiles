@@ -17,6 +17,11 @@ autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
 autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
 autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 0
+let g:go_highlight_trailing_whitespace_error = 1
 
 Plugin 'tomtom/tcomment_vim'
 Plugin 'scrooloose/nerdtree'
@@ -24,9 +29,12 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'mileszs/ack.vim'
 let g:ackprg = 'ag --vimgrep'
 
-Plugin 'altercation/vim-colors-solarized'
-let g:solarized_visibility = "low"
-let g:solarized_contrast = "high"
+Plugin 'pangloss/vim-javascript'
+
+Plugin 'vim-airline/vim-airline'
+
+Plugin 'rakr/vim-one'
+let g:airline_theme='one'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
@@ -164,15 +172,12 @@ set cursorline
 " Enable syntax highlighting
 syntax enable
 
+if (has("termguicolors"))
+ set termguicolors
+endif
+
 " Enable 256 colors palette
 set t_Co=256
-
-try
-    colorscheme solarized
-catch
-endtry
-
-set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -188,6 +193,12 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
+try
+    colorscheme one
+catch
+endtry
+
+set background=dark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
