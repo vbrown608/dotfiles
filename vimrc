@@ -11,6 +11,29 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" Appearance
+Plugin 'vim-airline/vim-airline'
+Plugin 'rakr/vim-one'
+let g:airline_theme='one'
+
+" Navigation
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'mileszs/ack.vim'
+let g:ackprg = 'ag --vimgrep'
+
+" Editing
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-surround'
+
+" Javascript
+Plugin 'pangloss/vim-javascript'
+
+" Ruby
+Plugin 'tpope/vim-rails'
+
+" Golang
 Plugin 'fatih/vim-go'
 let g:go_fmt_command = "goimports"
 autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
@@ -23,23 +46,8 @@ let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 0
 let g:go_highlight_trailing_whitespace_error = 1
 
-Plugin 'tomtom/tcomment_vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'mileszs/ack.vim'
-let g:ackprg = 'ag --vimgrep'
-
-Plugin 'pangloss/vim-javascript'
-
-Plugin 'vim-airline/vim-airline'
-
-Plugin 'rakr/vim-one'
-let g:airline_theme='one'
-
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'vbrown608/i3-vim-nav'
 " i3 integration
+Plugin 'vbrown608/i3-vim-nav'
 nnoremap <silent> <c-l> :call Focus('right', 'l')<CR>
 nnoremap <silent> <c-h> :call Focus('left', 'h')<CR>
 nnoremap <silent> <c-k> :call Focus('up', 'k')<CR>
