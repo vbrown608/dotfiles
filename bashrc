@@ -124,7 +124,7 @@ eval `dircolors ~/.dir_colors/dircolors`
 
 export EDITOR=vim
 export PYTHONPATH="${PYTHONPATH}:."
-export GOPATH="$HOME/dev/go"
+export GOPATH="$HOME/go"
 
 # Added by travis gem
 [ -f /home/vivian/.travis/travis.sh ] && source /home/vivian/.travis/travis.sh
@@ -139,7 +139,7 @@ alias nodejs="node"
 alias "yehos-qemu"="./make_yehos.sh && qemu-system-i386 -s -S -cdrom yehos-patched.iso -monitor stdio"
 alias dce="docker-compose exec"
 
-export CDPATH=.:/home/vivian/dev/go/src/github.com
+export CDPATH=.:/home/vivian/go/src/github.com
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
