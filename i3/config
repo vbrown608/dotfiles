@@ -134,8 +134,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color 	         #282C34
 set $inactive-bg-color   #181A1F
+set $bg-color            #373e48
 set $text-color          #ABB2BF
 set $inactive-text-color #636D83
 set $urgent-bg-color     #CA1243
@@ -155,11 +155,9 @@ bar {
   font pango:DejaVu Sans Mono 9
   colors {
     background #00000000
-    # background $inactive-bg-color
-    # separator #757575
     #                  border             background         text
-    focused_workspace  #000000a0          #00000000          $text-color
-    inactive_workspace #000000a0          #000000a0          $inactive-text-color
+    focused_workspace  #00000000          #00000000          $text-color
+    inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
     urgent_workspace   $urgent-bg-color   $urgent-bg-color   $urgent-text-color
   }
 }
