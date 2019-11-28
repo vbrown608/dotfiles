@@ -220,3 +220,4 @@ bindsym --release $mod+l exec --no-startup-id "/home/vivian/dev/go/bin/i3-vim-na
 # Gaps
 for_window [class=".*"] border pixel 0
 gaps inner 4
+bindsym $mod+o exec i3 open
