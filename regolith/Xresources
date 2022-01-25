@@ -1,0 +1,3 @@
+Xft.dpi: 172
+St.font: Source Code Pro:pixelsize=28:antialias=true:autohint=true
+i3-wm.bar.trayoutput: primary

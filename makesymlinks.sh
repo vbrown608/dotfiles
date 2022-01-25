@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="tmux.conf vimrc bashrc i3blocks.conf fonts dir_colors"        # list of files/folders to symlink in homedir
+files="tmux.conf vimrc bashrc fonts dir_colors"        # list of files/folders to symlink in homedir
 
 ##########
 
@@ -33,10 +33,8 @@ for file in $files; do
   fi
 done
 
-# i3 configuration goes in .config
-# will generalize if there are more of these
-echo "Linking i3 config"
-ln -s $dir/i3/ ~/.config/
+echo "Linking Regolith config"
+ln -s $dir/regolith/ ~/.config/regolith/
 
 # Get Vundle and install vim plugins
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim

@@ -1,0 +1,4 @@
+[pomodoro]
+command=~/.config/regolith/i3xrocks/pomodoro.sh $BLOCK_BUTTON
+signal=2
+interval=1
