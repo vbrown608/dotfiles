@@ -34,7 +34,7 @@ for file in $files; do
 done
 
 echo "Linking Regolith config"
-ln -s $dir/regolith/ ~/.config/regolith/
+ln -s $dir/regolith/ ~/.config/
 
 # Get Vundle and install vim plugins
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
